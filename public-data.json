@@ -1,0 +1,43 @@
+{
+  "exportType": "public-github-pages",
+  "generatedAt": "2026-03-17T04:48:02.707Z",
+  "buildInfo": {
+    "year": 2008,
+    "make": "Kawasaki",
+    "model": "Ninja ZX-6R",
+    "color": "Gold"
+  },
+  "bikeInfo": {},
+  "categories": [
+    {
+      "id": 14,
+      "name": "Accessories"
+    },
+    {
+      "id": 16,
+      "name": "Fluids"
+    },
+    {
+      "id": 18,
+      "name": "Other"
+    },
+    {
+      "id": 13,
+      "name": "Parts"
+    },
+    {
+      "id": 17,
+      "name": "Safety"
+    },
+    {
+      "id": 15,
+      "name": "Tools"
+    }
+  ],
+  "parts": [],
+  "maintenance": [],
+  "milestones": [],
+  "vendors": [],
+  "dynoLogs": [],
+  "photos": []
+}

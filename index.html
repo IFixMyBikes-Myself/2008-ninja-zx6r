@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>2008 Kawasaki Ninja ZX-6R - Build Report</title>
+  <style>
+    :root{--bg:#09111f;--bg2:#13233f;--panel:rgba(10,18,33,.84);--panel-2:rgba(17,26,46,.92);--line:rgba(148,163,184,.18);--text:#e5eefc;--muted:#93a4be;--accent:#4d96ff;--accent-2:#6bcb77;--warn:#ffd93d;--danger:#ff6b6b}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:"Segoe UI",Tahoma,Verdana,sans-serif;color:var(--text);background:radial-gradient(circle at top,#1a2d52 0%,#0c1426 42%,#050914 100%);min-height:100vh}
+    .shell{max-width:1200px;margin:0 auto;padding:28px 20px 40px}
+    .hero{position:relative;overflow:hidden;padding:28px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(135deg,rgba(77,150,255,.18),rgba(107,203,119,.10) 40%,rgba(8,14,26,.95));box-shadow:0 20px 60px rgba(0,0,0,.35)}
+    h1{margin:0;font-size:clamp(30px,5vw,48px);line-height:1.04}
+    .hero-sub{margin:12px 0 0;color:var(--muted);max-width:760px;line-height:1.6}
+    .hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+    .pill{display:inline-flex;align-items:center;padding:8px 12px;border:1px solid rgba(255,255,255,.1);border-radius:999px;background:rgba(255,255,255,.05);color:#d6e4ff;font-size:13px}
+    .tabs{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}
+    .tab-btn{border:1px solid var(--line);background:rgba(255,255,255,.04);color:#c8d7ef;padding:10px 14px;border-radius:12px;cursor:pointer;font-weight:700;transition:.2s ease}
+    .tab-btn:hover{transform:translateY(-1px)}
+    .tab-btn.active{background:linear-gradient(135deg,rgba(77,150,255,.25),rgba(58,123,213,.18));color:#fff;border-color:rgba(77,150,255,.55)}
+    .panel{display:none}.panel.active{display:block}
+    .grid{display:grid;gap:16px}.grid.cols-2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}.grid.cols-4{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+    .card{background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 20px 45px rgba(0,0,0,.25);margin-bottom:16px}
+    .card h2,.card h3{margin:0 0 12px}
+    .muted{color:var(--muted)}
+    .kpi{padding:16px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+    .kpi .label{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:#9eb4d6}
+    .kpi strong{display:block;margin-top:10px;font-size:28px;line-height:1;color:#fff}
+    .list{display:grid;gap:12px}.list-item{padding:14px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07)}
+    .row{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}.row.wrap{flex-wrap:wrap}
+    .status{display:inline-flex;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+    table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:12px 10px;border-bottom:1px solid rgba(148,163,184,.14);vertical-align:top;text-align:left}
+    th{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#8fb8ff}tbody tr:hover{background:rgba(255,255,255,.03)}
+    .table-wrap{overflow:auto}
+    .media-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+    .media-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:18px;overflow:hidden}
+    .media-frame{display:flex;align-items:center;justify-content:center;aspect-ratio:16/10;background:#020617;padding:10px}
+    .media-card img,.media-card video{width:100%;height:100%;object-fit:contain;background:#000;display:block;border-radius:12px}
+    .media-body{padding:12px}
+    .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+    .tag{display:inline-flex;padding:5px 9px;border-radius:999px;background:rgba(107,203,119,.14);color:#c7f0d0;font-size:12px}
+    .empty{padding:20px;border:1px dashed rgba(148,163,184,.26);border-radius:14px;color:var(--muted);text-align:center}
+    a{color:#9cc6ff}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <section class="hero">
+      <h1 id="hero-title">2008 Kawasaki Ninja ZX-6R</h1>
+      <p class="hero-sub">Public build report. Generated 2026-03-17T04:48:02.707Z.</p>
+      <div class="hero-meta"><span class="pill" id="hero-color">Color: N/A</span><span class="pill" id="hero-mileage">Mileage: N/A</span><span class="pill">GitHub Pages Ready</span></div>
+    </section>
+    <nav class="tabs" id="tabs">
+      <button class="tab-btn active" data-tab="overview">Overview</button>
+      <button class="tab-btn" data-tab="parts">Parts</button>
+      <button class="tab-btn" data-tab="maintenance">Maintenance</button>
+      <button class="tab-btn" data-tab="timeline">Timeline</button>
+      <button class="tab-btn" data-tab="vendors">Vendors</button>
+      <button class="tab-btn" data-tab="dyno">Dyno</button>
+      <button class="tab-btn" data-tab="gallery">Gallery</button>
+    </nav>
+    <section class="panel active" data-panel="overview"><div class="grid cols-4" id="overview-kpis"></div><div class="grid cols-2"><div class="card"><h3>Recent Milestones</h3><div class="list" id="recent-milestones"></div></div><div class="card"><h3>Recent Maintenance</h3><div class="list" id="recent-maintenance"></div></div></div></section>
+    <section class="panel" data-panel="parts"><div class="card"><h2>Parts Inventory</h2><div class="table-wrap"><table><thead><tr><th>Part</th><th>Status</th><th>Source</th><th>Qty</th><th>Total</th></tr></thead><tbody id="parts-table"></tbody></table></div></div></section>
+    <section class="panel" data-panel="maintenance"><div class="card"><h2>Maintenance Log</h2><div class="table-wrap"><table><thead><tr><th>Type</th><th>Date</th><th>Mileage</th><th>Cost</th><th>Description</th></tr></thead><tbody id="maintenance-table"></tbody></table></div></div></section>
+    <section class="panel" data-panel="timeline"><div class="card"><h2>Build Timeline</h2><div class="list" id="timeline-list"></div></div></section>
+    <section class="panel" data-panel="vendors"><div class="card"><h2>Vendors</h2><div class="list" id="vendors-list"></div></div></section>
+    <section class="panel" data-panel="dyno"><div class="card"><h2>Dyno &amp; Performance</h2><div class="table-wrap"><table><thead><tr><th>Date</th><th>Location</th><th>HP</th><th>Torque</th><th>Conditions</th></tr></thead><tbody id="dyno-table"></tbody></table></div></div></section>
+    <section class="panel" data-panel="gallery"><div class="card"><h2>Gallery</h2><div class="media-grid" id="media-grid"></div></div></section>
+  </div>
+  <script>
+    var tabs=document.querySelectorAll(".tab-btn"),panels=document.querySelectorAll(".panel");
+    tabs.forEach(function(b){b.addEventListener("click",function(){var t=b.getAttribute("data-tab");tabs.forEach(function(x){x.classList.remove("active")});panels.forEach(function(p){p.classList.toggle("active",p.getAttribute("data-panel")===t)});b.classList.add("active")})});
+    function esc(v){return String(v==null?"":v).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;")}
+    function money(v){return"$"+Number(v||0).toFixed(2)}
+    function dt(v){if(!v)return"N/A";var d=new Date(v);return isNaN(d.getTime())?v:d.toLocaleDateString()}
+    function isVid(n){return/\.(mp4|webm|mov|avi|wmv|mpeg|mpg)$/i.test(n||"")}
+    function empty(t){return'<div class="empty">'+esc(t)+"</div>"}
+    fetch("./public-data.json").then(function(r){return r.json()}).then(function(data){
+      var bike=data.bikeInfo||{};
+      document.getElementById("hero-title").textContent=([bike.year,bike.make,bike.model,bike.trim].filter(Boolean).join(" "))||"Build Report";
+      document.getElementById("hero-color").textContent="Color: "+(bike.color||"N/A");
+      document.getElementById("hero-mileage").textContent="Mileage: "+(bike.mileage!=null?Number(bike.mileage).toLocaleString()+" mi":"N/A");
+      var excl=["installed","returned","wrong product"];
+      var rem=(data.parts||[]).filter(function(p){return excl.indexOf(String(p.status||"").toLowerCase())===-1}).reduce(function(s,p){return s+(Number(p.unit_price||0)*Number(p.quantity||0))+Number(p.shipping||0)+Number(p.tax||0)},0);
+      document.getElementById("overview-kpis").innerHTML=[{label:"Parts",value:(data.parts||[]).length},{label:"Remaining Cost",value:money(rem)},{label:"Maintenance Logs",value:(data.maintenance||[]).length},{label:"Milestones",value:(data.milestones||[]).length},{label:"Dyno Runs",value:(data.dynoLogs||[]).length},{label:"Gallery",value:(data.photos||[]).length}].map(function(i){return'<div class="kpi"><span class="label">'+esc(i.label)+'</span><strong>'+esc(i.value)+"</strong></div>"}).join("");
+      document.getElementById("recent-milestones").innerHTML=(data.milestones||[]).slice(0,5).map(function(m){return'<div class="list-item"><div class="row"><strong>'+esc(m.title||"Untitled")+'</strong><span class="status">'+esc(m.status||"planned")+"</span></div><div class="muted">"+esc(dt(m.milestone_date))+"</div><div style="margin-top:8px">"+esc(m.description||"")+"</div></div>"}).join("")||empty("No milestones.");
+      document.getElementById("recent-maintenance").innerHTML=(data.maintenance||[]).slice(0,5).map(function(m){return'<div class="list-item"><div class="row"><strong>'+esc(m.type||"Maintenance")+'</strong><span>'+esc(money(m.cost||0))+"</span></div><div class="muted">"+esc(dt(m.service_date))+"</div></div>"}).join("")||empty("No maintenance records.");
+      document.getElementById("parts-table").innerHTML=(data.parts||[]).map(function(p){var t=(Number(p.unit_price||0)*Number(p.quantity||0))+Number(p.shipping||0)+Number(p.tax||0);return"<tr><td><strong>"+esc(p.part_name||"")+"</strong><div class="muted">"+esc(p.part_number||"")+"</div></td><td>"+esc(p.status||"")+"</td><td>"+esc(p.website||"N/A")+"</td><td>"+esc(p.quantity||0)+"</td><td>"+esc(money(t))+"</td></tr>"}).join("")||"<tr><td colspan=5>"+empty("No parts.")+"</td></tr>";
+      document.getElementById("maintenance-table").innerHTML=(data.maintenance||[]).map(function(m){return"<tr><td>"+esc(m.type||"N/A")+"</td><td>"+esc(dt(m.service_date))+"</td><td>"+esc(m.mileage!=null?Number(m.mileage).toLocaleString()+" mi":"N/A")+"</td><td>"+esc(money(m.cost||0))+"</td><td>"+esc(m.description||"")+"</td></tr>"}).join("")||"<tr><td colspan=5>"+empty("No records.")+"</td></tr>";
+      document.getElementById("timeline-list").innerHTML=(data.milestones||[]).map(function(m){return'<div class="list-item"><div class="row wrap"><strong>'+esc(m.title||"Untitled")+'</strong><span class="status">'+esc(m.status||"planned")+"</span></div><div class="meta"><span class="tag">"+esc(m.category||"General")+"</span><span class="tag">"+esc(dt(m.milestone_date))+"</span>"+(m.cost?"<span class="tag">"+esc(money(m.cost))+"</span>":"")+"</div><div style="margin-top:10px">"+esc(m.description||"")+"</div></div>"}).join("")||empty("No timeline items.");
+      document.getElementById("vendors-list").innerHTML=(data.vendors||[]).map(function(v){return'<div class="list-item"><div class="row wrap"><strong>'+esc(v.name||"Vendor")+'</strong>'+(!v.rating?"":'<span class="status">Rating '+esc(v.rating)+"/5</span>")+"</div>"+(v.website?'<div style="margin-top:10px"><a href="'+esc(v.website)+'" target="_blank" rel="noopener">'+esc(v.website)+"</a></div>":"")+"</div>"}).join("")||empty("No vendors.");
+      document.getElementById("dyno-table").innerHTML=(data.dynoLogs||[]).map(function(d){return"<tr><td>"+esc(dt(d.date))+"</td><td>"+esc(d.location||"N/A")+"</td><td>"+esc(d.horsepower!=null?d.horsepower+" hp":"N/A")+"</td><td>"+esc(d.torque!=null?d.torque+" lb-ft":"N/A")+"</td><td>"+esc([d.air_temp!=null?d.air_temp+"°":null,d.humidity!=null?d.humidity+"% humidity":null].filter(Boolean).join(" • ")||"N/A")+"</td></tr>"}).join("")||"<tr><td colspan=5>"+empty("No dyno runs.")+"</td></tr>";
+      document.getElementById("media-grid").innerHTML=(data.photos||[]).map(function(p){var media=isVid(p.original_name||p.filename)?'<video src="'+p.public_path+'" controls preload="metadata"></video>':'<img src="'+p.public_path+'" alt="'+esc(p.title||p.original_name||"Media")+'" />';return'<div class="media-card"><div class="media-frame">'+media+'</div><div class="media-body"><strong>'+esc(p.title||p.original_name||"Untitled")+'</strong><div class="meta"><span class="tag">'+esc(p.category||"General")+"</span></div></div></div>"}).join("")||empty("No media.");
+    }).catch(function(e){console.error("Failed to load public data:",e)});
+  </script>
+</body>
+</html>
