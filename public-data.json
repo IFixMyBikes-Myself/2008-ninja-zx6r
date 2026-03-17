@@ -7,7 +7,14 @@
     "model": "Ninja ZX-6R",
     "color": "Gold"
   },
-  "bikeInfo": {},
+  "bikeInfo": {
+    "year": 2008,
+    "make": "Kawasaki",
+    "model": "Ninja ZX-6R",
+    "trim": "Ninja",
+    "color": "GOLD",
+    "mileage": 0
+  },
   "categories": [
     {
       "id": 14,
