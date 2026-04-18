@@ -1,19 +1,19 @@
 {
   "exportType": "public-github-pages",
-  "generatedAt": "2026-03-17T04:48:02.707Z",
+  "generatedAt": "2026-04-18T21:56:48.310Z",
   "buildInfo": {
     "year": 2008,
     "make": "Kawasaki",
     "model": "Ninja ZX-6R",
-    "color": "Gold"
+    "color": "RED"
   },
   "bikeInfo": {
     "year": 2008,
     "make": "Kawasaki",
     "model": "Ninja ZX-6R",
-    "trim": "Ninja",
-    "color": "GOLD",
-    "mileage": 0
+    "trim": null,
+    "color": "RED",
+    "mileage": 28202
   },
   "categories": [
     {
@@ -41,7 +41,21 @@
       "name": "Tools"
     }
   ],
-  "parts": [],
+  "parts": [
+    {
+      "id": 3,
+      "part_name": "AirFIlter",
+      "category_id": 14,
+      "part_number": "N/A",
+      "quantity": 1,
+      "website": "",
+      "status": "ordered",
+      "unit_price": 564,
+      "shipping": 0,
+      "tax": 0,
+      "order_date": ""
+    }
+  ],
   "maintenance": [],
   "milestones": [],
   "vendors": [],
